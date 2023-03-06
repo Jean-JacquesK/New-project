@@ -7,7 +7,18 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str){
-
-    
+function reverseStr(str) {
+  return str.split("").reverse().join("");
 }
+
+function palindrome(str) {
+  const strMin = str.toLowerCase();
+  if (strMin === reverseStr(str).toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(palindrome("abba"));
+console.log(palindrome("abcdefg"));

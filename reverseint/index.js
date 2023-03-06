@@ -8,9 +8,14 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-
-function reverseint(n){
-
-
-    
+function reverseInt(num) {
+  const number =
+    parseInt(num.toString().split("").reverse().join("")) * Math.sign(num);
+  return number;
 }
+
+console.log(reverseInt(15));
+console.log(reverseInt(981));
+console.log(reverseInt(500));
+console.log(reverseInt(-15));
+console.log(reverseInt(-90));
